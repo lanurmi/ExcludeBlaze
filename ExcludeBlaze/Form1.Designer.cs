@@ -65,9 +65,9 @@
             this.bzListTitleLabel.AutoSize = true;
             this.bzListTitleLabel.Location = new System.Drawing.Point(12, 13);
             this.bzListTitleLabel.Name = "bzListTitleLabel";
-            this.bzListTitleLabel.Size = new System.Drawing.Size(90, 13);
+            this.bzListTitleLabel.Size = new System.Drawing.Size(232, 13);
             this.bzListTitleLabel.TabIndex = 3;
-            this.bzListTitleLabel.Text = "BZ\'s exclusion list";
+            this.bzListTitleLabel.Text = "BZ\'s custom exclusion list (default paths hidden)";
             // 
             // YourPathsBox
             // 
