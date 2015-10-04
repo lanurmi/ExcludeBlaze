@@ -151,8 +151,9 @@ namespace ExcludeBlaze
             tw.Close();
         }
 
-        private void writeYourPaths(string[] paths)
+        private void writeYourPaths()
         {
+            string[] paths = YourPathsBox.Items.Cast<string>().ToArray();
             System.IO.File.WriteAllLines(getYourPathsPath(), paths);
         }
 
@@ -175,9 +176,7 @@ namespace ExcludeBlaze
                 if (YourPathsBox.Items.Contains(bzpath) == false)
                     YourPathsBox.Items.Add(bzpath);
 
-            string[] paths = YourPathsBox.Items.Cast<string>().ToArray();
-
-            writeYourPaths(paths);
+            writeYourPaths();
             updateBoxCounts();
         }
 
@@ -189,6 +188,7 @@ namespace ExcludeBlaze
                 YourPathsBox.Items.Add((dlg.SelectedPath + @"\").ToLower());
 
             updateBoxCounts();
+            writeYourPaths();
         }
 
         private void removeButton_Click(object sender, EventArgs e)
@@ -196,6 +196,7 @@ namespace ExcludeBlaze
             if (YourPathsBox.SelectedIndex != -1)
                 YourPathsBox.Items.RemoveAt(YourPathsBox.SelectedIndex);
             updateBoxCounts();
+            writeYourPaths();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
