@@ -1,6 +1,8 @@
 ExcludeBlaze
 ============
 
+*Edit: 2021-11-13:* The bug this application was created to solve has apparently been fixed at some point by Backblaze, and this application may be less relevant than in earlier years.
+
 What's this?
 ------------
 
